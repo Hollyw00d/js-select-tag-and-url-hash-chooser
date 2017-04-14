@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>  
+<head>
+    <title>JS Chooser</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<h1>JS Chooser</h1>
+
+<h2>Choose Portfolio Project Category</h2>
+
+<select name="portfolio-project-chooser" id="portfolio-project-chooser">
+    <option data-project-category="featured-projects">Featured Projects</option>
+    <option data-project-category="javascript-and-jquery">JavaScript and jQuery</option>
+    <option data-project-category="php-and-mysql">PHP and MySQL</option>
+    <option data-project-category="ruby-and-ruby-on-rails">Ruby and Ruby on Rails</option>
+    <option data-project-category="social-networks">Social Networks</option>
+    <option data-project-category="wordpress">WordPress</option> 
+</select>
+
+<div id="featured-projects-section" class="show-override">
+    <h2>Featured Projects</h2>
+    <ul class="portfolio-list">
+        <li class="featured-project1" data-featured-project-category="wordpress">
+            Strong Against Cancer<br>Fundraising WordPress Site<br>Fights Childhood Cancer
+        </li>
+        <li class="featured-project2" data-featured-project-category="wordpress">
+            MP Ministry Wedding<br>Officiating Website Helps<br>Couples Get Married
+        </li>
+        <li class="featured-project3" data-featured-project-category="ruby-and-ruby-on-rails">
+            Ruby on Rails, Responsive<br>Website for Seattle Area<br>Disc Golf
+        </li>
+        
+        <li class="featured-project4" data-featured-project-category="wordpress">Extensive PHP, JavaScript, and<br>WordPress Development on<br>Online Teen Girl Magazine</li>
+        
+        <li class="featured-project5" data-featured-project-category="javascript-and-jquery">
+            Created a Responsive Shopping<br>List App with Ability to<br>Cross Off and Uncross Items
+        </li>
+        
+        <li class="featured-project6" data-featured-project-category="wordpress">
+            Golden Goose Labs Responsive<br>WordPress Site with Mobile-Only<br>Drop-Down Menu
+        </li>
+    </ul>
+</div>
+
+	
+<div id="all-projects-section">
+		<h2 data-project-category="javascript-and-jquery" class="hide-override">JavaScript and jQuery</h2>
+		<h2 data-project-category="php-and-mysql" class="hide-override">PHP and MySQL</h2>
+		<h2 data-project-category="ruby-and-ruby-on-rails" class="hide-override">Ruby and Ruby on Rails</h2>
+		<h2 data-project-category="social-networks" class="hide-override">Social Networks</h2>
+		<h2 data-project-category="wordpress" class="hide-override">WordPress</h2>
+	
+		<ul class="portfolio-list"><li data-project-category="wordpress" class="portfolio-project1 hide-override"><a href="https://www.mattjennings.net/portfolio-feed/wordpress-website-for-strong-against-cancer"><img src="https://i2.wp.com/www.mattjennings.net/wp-content/uploads/2015/12/sac-desktop-thumb.png?fit=200%2C125&amp;ssl=1" alt="WordPress Website for Strong Against Cancer" width="200" height="125"><br>Strong Against Cancer<br>Fundraising WordPress Site<br>Fights Childhood Cancer</a></li><li data-project-category="ruby-and-ruby-on-rails" class="portfolio-project1 hide-override"><a href="https://www.mattjennings.net/portfolio-feed/seattle-disc-golf-website"><img src="https://i2.wp.com/www.mattjennings.net/wp-content/uploads/2015/09/seadiscgolf_desktop_home_thumb.png?fit=200%2C125&amp;ssl=1" alt="Seattle Disc Golf Website" width="200" height="125"><br>Ruby on Rails, Responsive<br>Website for Seattle Area<br>Disc Golf</a></li><li data-project-category="javascript-and-jquery" class="portfolio-project1 hide-override"><a href="https://www.mattjennings.net/portfolio-feed/shopping-list-app"><img src="https://i2.wp.com/www.mattjennings.net/wp-content/uploads/2016/02/shopping-list-app_crossed-off_thumb.png?fit=200%2C125&amp;ssl=1" alt="Shopping List App" width="200" height="125"><br>Created a Responsive Shopping<br>List App with Ability to<br>Cross Off and Uncross Items</a></li><li data-project-category="php-and-mysql" class="portfolio-project1 hide-override"><a href="https://www.mattjennings.net/portfolio-feed/codeigniter-php-mvc-framework-user-quotes-and-favorites-website-demo"><img src="https://i2.wp.com/www.mattjennings.net/wp-content/uploads/2015/09/codeigniter-demo1_user-quotes-and-favorites-page_thumb.png?fit=200%2C125&amp;ssl=1" alt="CodeIgniter PHP MVC Framework User Quotes and Favorites Website Demo" width="200" height="125"><br>CodeIgniter PHP Framework<br>Demo with a User Login<br>Form to Show Quotes &amp; Favorites</a></li><li data-project-category="social-networks" class="portfolio-project1 hide-override"><a href="https://www.mattjennings.net/portfolio-feed/social-networking-and-wordpress-blog-development-for-kai-orthodontics"><img src="https://i1.wp.com/www.mattjennings.net/wp-content/uploads/2015/01/kai-orthodontics_wordpress-blog_thumb.png?fit=200%2C125&amp;ssl=1" alt="Social Networking and WordPress Blog Development for Kai Orthodontics" width="200" height="125"><br>Developed WordPress Blog<br>and Branded Facebook,<br>YouTube, and Twitter</a></li><li data-project-category="wordpress" class="portfolio-project2 hide-override"><a href="https://www.mattjennings.net/portfolio-feed/wordpress-website-for-mark-wedding-officiant"><img src="https://i1.wp.com/www.mattjennings.net/wp-content/uploads/2015/12/mpministry-desktop-thumb.png?fit=200%2C125&amp;ssl=1" alt="WordPress Website for Mark, Wedding Officiant" width="200" height="125"><br>MP Ministry Wedding<br>Officiating Website Helps<br>Couples Get Married</a></li><li data-project-category="social-networks" class="portfolio-project2 hide-override"><a href="https://www.mattjennings.net/portfolio-feed/wordpress-blog-development-social-networking-and-seo-work-for-lisenby-orthodontics"><img src="https://i2.wp.com/www.mattjennings.net/wp-content/uploads/2015/01/lisenby-orthodontics_wordpress-blog_thumb1.png?fit=200%2C125&amp;ssl=1" alt="WordPress Blog Development, Social Networking and SEO Work for Lisenby Orthodontics" width="200" height="125"><br>Developed WordPress Blog,<br>Branded Facebook and YouTube<br>and Implemented SEO</a></li><li data-project-category="javascript-and-jquery" class="portfolio-project2 hide-override"><a href="https://www.mattjennings.net/portfolio-feed/website-that-uses-pop-ups-that-play-videos-using-jquery-and-youtube-api"><img src="https://i1.wp.com/www.mattjennings.net/wp-content/uploads/2013/08/www.drlanzetta.com_thumb.png?fit=200%2C125&amp;ssl=1" alt="Website that Uses Pop-Ups that Play Videos Using jQuery and YouTube API" width="200" height="125"><br>Orthodontic Website Including<br>Pop-Ups that Play Videos<br>Using jQuery &amp; YouTube API</a></li><li data-project-category="social-networks" class="portfolio-project3 hide-override"><a href="https://www.mattjennings.net/portfolio-feed/social-networking-and-wordpress-blog-development-for-allen-orthodontics"><img src="https://i2.wp.com/www.mattjennings.net/wp-content/uploads/2015/01/allen-orthodontics_wordpress-blog_thumb.png?fit=200%2C125&amp;ssl=1" alt="Social Networking and WordPress Blog Development for Allen Orthodontics" width="200" height="125"><br>Developed WordPress Blog<br>and Branded Facebook<br>and Other Social Networks</a></li><li data-project-category="wordpress" class="portfolio-project3 hide-override"><a href="https://www.mattjennings.net/portfolio-feed/web-development-on-metiza-com-an-online-wordpress-magazine-for-teen-girls"><img src="https://i0.wp.com/www.mattjennings.net/wp-content/uploads/2016/05/metiza-mag_thumbnail_home.png?fit=200%2C125&amp;ssl=1" alt="Web Development on Metiza.com, an Online WordPress Magazine for Teen Girls" width="200" height="125"><br>Extensive PHP, JavaScript, and<br>WordPress Development on<br>Online Teen Girl Magazine</a></li><li data-project-category="wordpress" class="portfolio-project4 hide-override"><a href="https://www.mattjennings.net/portfolio-feed/wordpress-website-for-golden-goose-labs"><img src="https://i0.wp.com/www.mattjennings.net/wp-content/uploads/2015/09/ggl_desktop_home_thumb.png?fit=200%2C125&amp;ssl=1" alt="WordPress Website for Golden Goose Labs" width="200" height="125"><br>Golden Goose Labs Responsive<br>WordPress Site with Mobile-Only<br>Drop-Down Menu</a></li></ul></div>	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+</body>
+</html>

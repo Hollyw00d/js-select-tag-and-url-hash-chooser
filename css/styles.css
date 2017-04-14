@@ -1,0 +1,28 @@
+/****** CSS ******/
+
+
+/* Portfolio */
+.portfolio-list {
+    display: inline;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+
+.portfolio-list li {
+    display: inline-block;
+    height: 220px;
+    text-align: center;
+    width: 211px;
+    float: left;
+		border: 1px solid #000;
+}
+
+
+
+
+
+/* Utility */
+.show-override {
+    display: block !important;
+}
