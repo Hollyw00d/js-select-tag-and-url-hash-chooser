@@ -20,22 +20,45 @@
         $(featuredId).removeClass(hideOverrideClass).addClass(showOverrideClass);
       }
 
+
+
+
+
+
+
       function hashChange(getSelectTag) {
         var hash = location.hash.slice(1);
         getSelectTag.find("option[data-project-category=" + hash + "]").prop("selected", "selected").addClass(hashSelectedClass);
 
         if( hash === featuredProjectsDataAttr ) {
-          allProjectsSection.find("h2").removeClass("show-override").addClass("hide-override");
-          allProjectsSection.find("li").removeClass("show-inlineblock-override").addClass("hide-override");
-
-          allProjectsSection.find("h2[data-project-category=" + hash + "]").removeClass("hide-override").addClass("show-override");
-          allProjectsSection.find("li[data-project-category=" + hash + "]").removeClass("hide-override").addClass("show-inlineblock-override");
+          allProjectsSection.removeClass(showOverrideClass);
+          featuredProjectsSection.removeClass(hideOverrideClass).addClass(showOverrideClass);
         }
         else {
-          allProjectsSection.find("h2").removeClass("show-override").addClass("hide-override");
-          allProjectsSection.find("li").removeClass("show-inlineblock-override").addClass("hide-override");
+          featuredProjectsSection.removeClass(showOverrideClass).addClass(hideOverrideClass);
+          allProjectsSection.addClass(showOverrideClass);
+         
+          allProjectsSection.find("h2[data-project-category=" + hash + "]").removeClass(hideOverrideClass).addClass(showOverrideClass);
+         
         }
       }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       // Portfolio page (front page) code to show and hide project categories AND
       // code runs ONLY if on Portfolio page (front page)
