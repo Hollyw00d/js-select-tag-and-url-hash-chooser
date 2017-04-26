@@ -4,6 +4,7 @@
 
   // Start jQuery Document Ready
   $(document).ready(function() {
+
     function portofolioChooser() {
 
       // Variables for the hash change and SELECT tag JS
@@ -20,12 +21,6 @@
         $(featuredId).removeClass(hideOverrideClass).addClass(showOverrideClass);
       }
 
-
-
-
-
-
-
       function hashChange(getSelectTag) {
         var hash = location.hash.slice(1);
         getSelectTag.find("option[data-project-category=" + hash + "]").prop("selected", "selected").addClass(hashSelectedClass);
@@ -39,26 +34,9 @@
           allProjectsSection.addClass(showOverrideClass);
          
           allProjectsSection.find("h2[data-project-category=" + hash + "]").removeClass(hideOverrideClass).addClass(showOverrideClass);
-         
+          allProjectsSection.find("li[data-project-category=" + hash + "]").removeClass(hideOverrideClass).addClass("show-inlineblock-override");
         }
       }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
       // Portfolio page (front page) code to show and hide project categories AND
       // code runs ONLY if on Portfolio page (front page)
@@ -74,26 +52,26 @@
           // ONLY display portfolio projects from chosen portfolio projects, like "JavaScript and jQuery"
           if( chosenOptionTagDataAttr !== featuredProjectsDataAttr ) {
 
-            if( featuredProjectsSection.hasClass("show-override") ) {
-              featuredProjectsSection.removeClass("show-override").addClass("hide-override");
+            if( featuredProjectsSection.hasClass(showOverrideClass) ) {
+              featuredProjectsSection.removeClass(showOverrideClass).addClass(hideOverrideClass);
             }
 
-            allProjectsSection.find("h2").removeClass("show-override").addClass("hide-override");
-            allProjectsSection.find("li").removeClass("show-inlineblock-override").addClass("hide-override");
+            allProjectsSection.find("h2").removeClass(showOverrideClass).addClass(hideOverrideClass);
+            allProjectsSection.find("li").removeClass("show-inlineblock-override").addClass(hideOverrideClass);
 
-            allProjectsSection.find("h2[data-project-category=" + chosenOptionTagDataAttr + "]").removeClass("hide-override").addClass("show-override");
-            allProjectsSection.find("li[data-project-category=" + chosenOptionTagDataAttr + "]").removeClass("hide-override").addClass("show-inlineblock-override");
+            allProjectsSection.find("h2[data-project-category=" + chosenOptionTagDataAttr + "]").removeClass(hideOverrideClass).addClass(showOverrideClass);
+            allProjectsSection.find("li[data-project-category=" + chosenOptionTagDataAttr + "]").removeClass(hideOverrideClass).addClass("show-inlineblock-override");
             location.hash = "#" + chosenOptionTagDataAttr;
           }
           // ELSE "featured-projects" OPTION tag IS CHOSEN  then
           // ONLY display "Featured Projects" portfolio item
           else {
-            if( featuredProjectsSection.hasClass("hide-override") ) {
-              featuredProjectsSection.removeClass("hide-override").addClass("show-override");
+            if( featuredProjectsSection.hasClass(hideOverrideClass) ) {
+              featuredProjectsSection.removeClass(hideOverrideClass).addClass(showOverrideClass);
             }
 
-            allProjectsSection.find("h2").removeClass("show-override").addClass("hide-override");
-            allProjectsSection.find("li").removeClass("show-inlineblock-override").addClass("hide-override");
+            allProjectsSection.find("h2").removeClass(showOverrideClass).addClass(hideOverrideClass);
+            allProjectsSection.find("li").removeClass("show-inlineblock-override").addClass(hideOverrideClass);
             location.hash = "#" + featuredProjectsDataAttr;
           }
         });
@@ -106,8 +84,8 @@
 
       }
 
-
     }
+
     portofolioChooser();
 
   });
